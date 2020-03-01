@@ -37,7 +37,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+  
   coupons.each do |coupon|
   name = coupon[:item]
   if cart.include?(name) && cart[name][:count] >= coupon[:num]
