@@ -12,7 +12,7 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  updated_cart = {}
+  updated_cart = []
   cart.each do |hash|
     hash.each do |key, value|
       if updated_cart[key]
