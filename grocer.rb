@@ -12,17 +12,17 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  
-  consolidated_cart = {}
-  cart.each do |item|
-    item.each do |food_item, price_hash|
-      if consolidated_cart[food_item]
-        consolidated_cart[food_item][:count] +=1 
+  updated_cart = {}
+  cart.each do |hash|
+    hash.each do |key, value|
+      if updated_cart[key]
+        updated_cart[key][:count] += 1
       else
-        consolidated_cart[food_item] = price_hash
-        consolidated_cart[food_item][:count] = 1
+        updated_cart[key] = value
+        updated_cart[key][:count] = 1
       end
+    end
   end
-end
-   consolidated_cart   
+  updated_cart
+  
 end
