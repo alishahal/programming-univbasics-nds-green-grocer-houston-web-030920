@@ -1,12 +1,3 @@
-require "pry"
-
-my_cart = {
-  "AVOCADO" => {:price => 3.00, :clearance => true, :count => 3},
-  "KALE"    => {:price => 3.00, :clearance => false, :count => 1}
-}
-
-coupons = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-
 
 def find_item_by_name_in_collection(name, collection)
   
